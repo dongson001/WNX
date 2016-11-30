@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="Content-Type" content="text/html">
+  <meta content="width=device-width,minimum-scale=1.00001,maximum-scale=1.00001,user-scalable=no" name="viewport">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta content="telephone=no" name="format-detection">
+  <!-- UC默认竖屏 ，UC强制全屏 -->
+  <meta name="full-screen" content="yes">
+  <meta name="browsermode" content="application">
+  <!-- QQ强制竖屏 QQ强制全屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="x5-page-mode" content="app">
+  <meta name="format-detection" content="email=no" />
+  <meta name="msapplication-tap-highlight" content="no">
+  <link rel="shortcut icon" href="http://m.pingan.com/favicon.ico">
+    <script>
+        var nav = navigator.userAgent.indexOf('One Account IOS') > -1;
+        window.isChangeSkin = nav ? 'false' : 'true';
+    </script>
+</head>
+
+<body style="background-color:#fff">
+  <div id="root"></div>
+  <script src='http://script2.pingan.com/app_js/c3/chaoshi/huodong/neon/armor.js'></script>
+</body>
+<script type="text/javascript">
+function loadWTScript(a, b) {
+	var c = document.createElement("script");
+	c.type = "text/javascript",
+	c.async = !0,
+	c.src = a,
+	dcsReady(c, b),
+	document.getElementsByTagName("head")[0].appendChild(c)
+}
+function dcsReady(a, b) {
+	a.readyState ? a.onreadystatechange = function() { ("loaded" == a.readyState || "complete" == a.readyState) && (a.onreadystatechange = null, b())
+	}: a.onload = function() {
+		b()
+	}
+}
+loadWTScript(window.location.protocol.indexOf('https:')==0?'https://pa-ssl.pingan.com/app_js/sdc/prd/sdc9.js':'http://www.pingan.com/app_js/sdc/prd/sdc9.js', function(){
+if (typeof(_tag) != "undefined"){
+  _tag.dcsid="dcspymm36v5rgwyi354yjpm91_6q9m";
+        _tag.DCSext.platform="toa";
+        var s=_tag.dcsGetIdAsync();
+        if(s)
+            dcsReady(s,function(){_tag.dcsCollect()});
+        else
+            _tag.dcsCollect();
+    }
+})
+</script>
+
+</html>

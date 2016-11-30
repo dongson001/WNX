@@ -1,0 +1,80 @@
+
+
+.buyContainer{
+	width: 100%;
+	& li{
+		margin-top: 10px;
+		padding: 0 15px;
+		height: 44px;
+		background: #fff;
+		.relative;
+		&:before{
+			.circle(#ccc);
+			.farther-flex;
+		}
+		&:after{
+			.horizontal(#ccc);
+			.farther-flex;
+		}
+		& .leftDiv{
+			width: 30%;
+			line-height: 44px;
+			font-size: 14px;
+			// text-align: center;
+			}
+		& .rightDiv{
+			width: 60%;
+			font-size: 12px;
+			color: #999;
+			line-height: 44px;
+			text-align: right;
+			& input{
+				// display: block;
+				width: 100%;
+				font-size: 12px;
+				border: 0;
+				padding: 16px 0;
+				text-align: right;
+				-webkit-appearance: none;
+			    background: rgba(255, 255, 255, 0);
+			    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+			    -o-tap-highlight-color: rgba(0, 0, 0, 0);
+			    tap-highlight-color: rgba(0, 0, 0, 0);
+			}
+		}
+	}
+}
+.lastDiv{
+		background: inherit;
+		margin: 12px 15px 0 0;
+		font-size: 13px;
+		text-align: right;
+		color: #9b9b9b;
+	}
+.bankLimit-box {
+	    padding: 12px 15px;
+	}
+.bankLimit {
+    float: right;
+    color: #cfa767;
+    font-size: 14px;
+}
+.buyBtn{
+	display: block;
+	width: 90%;
+	font-size: 18px;
+	margin: 12px auto 0;
+	padding: 12px 0;
+	background: #CFA766;
+	color: #fff;
+    .round(5px);
+}
+.buyText{
+	padding: 20px 15px 0;
+	& p{
+		font-size: 13px;
+    	color: #9b9b9b;
+    	line-height: 20px;
+	}
+}

@@ -1,0 +1,31 @@
+//******* 进度条
+
+@90:90;
+// 圆形进度条
+.rotundity(@width; @height; @display: flex; @border-radius:50%) {
+    border-radius: @border-radius;
+    overflow: hidden;
+    height: @height;
+    width: @width;
+    display: @display;
+}
+
+.rotundity-fill(@width; @height; @margin; @line-height; @font-size; @color; @bg-color:#fff; @bd-radius:50%;) {
+  margin:@margin;
+  width: @width;
+  height: @height;
+  background: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: @line-height;
+  font-size: @font-size;
+  color:@color;
+}
+
+//*****   进度参考（可根据项目做修改）
+.rotundity-progress() {
+  /*0-50% 修改270~90   算法:360* n% + 90 */
+  background-image: linear-gradient(90deg, #efefef 50%, transparent 50%, transparent), linear-gradient(270deg, #ff8229 50%, #efefef 50%, #efefef);
+/*50%-100% 修改-90~90 算法:   Math.ceil((n/100-50/100)*100)*3.6-90 */
+  /*background-image: linear-gradient(90deg, #0BF 50%, transparent 50%, transparent), linear-gradient(270deg, #0BF 50%, #efefef 50%, #efefef);*/
+}

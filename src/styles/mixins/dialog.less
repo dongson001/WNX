@@ -1,0 +1,22 @@
+.make-mask(@bg) {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  background-color: @bg;
+}
+.make-popup-box(@width: 315px, @padding-vertical: 20px, @padding-horizontal: 0, @bg: #fff, @border-radius:4px) {
+  display: block;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  z-index:99;
+  transform: translate3d(-50%, -50%, 0);
+  width: @width - ( @padding-horizontal * 2 );
+  padding: @padding-vertical @padding-horizontal;
+  background-color: @bg;
+  border-radius: @border-radius;
+}

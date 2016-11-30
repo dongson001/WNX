@@ -1,0 +1,85 @@
+/* 键盘动画 */
+@keyframes fadeInUp {
+    0%{
+      opacity:0;
+      transform:translateY(216px)
+    }
+    100%{
+      opacity:1;
+      transform:translateY(0)
+    }
+}
+
+/* 密码输入框动画 */
+@keyframes pulse{
+  0%{
+    opacity: 0;
+    transform: translateX(-50%) scale(1.1);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+/* 提示对话框动画 */
+@keyframes pulse1{
+  0%{
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* loading按钮动画所使用 */
+@keyframes btn-spin{
+  0% {
+    transform:rotate(0deg)
+  }to {
+     transform:rotate(360deg)
+   }
+}
+
+
+/* 加载页面loading动画 */
+@keyframes ball-spin-fade-loader {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+
+  50% {
+    opacity: 0.3;
+    transform: scale(0.4);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(0.8);
+  }
+}
+/* 加载页面loading动画 end */
+
+// 渐隐动画
+@keyframes fade-out{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+
+@keyframes bouncedelay {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+}

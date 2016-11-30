@@ -1,0 +1,141 @@
+@keyboardCls: keyboard;
+.@{keyboardCls} {
+  & {
+    width: 100%;
+    min-width: 320px;
+    height: 216px;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    animation:fadeInUp .3s .2s ease both;
+  }
+  .brand-title {
+    color: #4b4b4b;
+    font-size: 14px;
+  }
+  .brand-title .brand-title-finish {
+    position: absolute;
+    text-align: right;
+    right:10px;
+    top:0;
+    font-size: 13px;
+    color: #9B9B9B;
+  }
+  &-row {
+    display: flex;
+    width: 100%;
+    height: 25%;
+    color: #020202;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		background: transparent;
+  }
+
+  &-row li {
+    width: 100% / 3;
+    flex: 1;
+    height: 100%;
+    text-align: center;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+   &-row li:active{
+       background-color: rgba(0, 0, 0, 0.2);
+   }
+
+  &-row li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 200%;
+    border-top: 1px solid #c8c8c8;
+    border-right: 1px solid #c8c8c8;
+    transform-origin: 0 0;
+    transform: scale3D(0.5, 0.5, .5);
+    box-sizing: border-box;
+  }
+
+  &-row li:last-child {
+    border-right: none;
+  }
+
+  &-row li .number {
+    padding-top: 9px;
+  }
+
+  &-row li .letter {
+    padding-top: 3px;
+    font-size: 12px;
+    color: #030303;
+    letter-spacing: 1px;
+  }
+
+  &-row li .letter span {
+    display: block;
+    transform: scale(0.8, 0.8);
+    //transform-origin: 0 0;
+  }
+
+  &-row li.gray {
+    background: #d4d8db;
+  }
+
+  &-row li.zero {
+    line-height: 54px;
+  }
+  &-row .clear{
+  }
+  &-row .clearIcon{
+    display: inline-block;
+    position: absolute;
+    left: 54%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 15px;
+    height: 16px;
+    background: #090909;
+    border-radius: 3px;
+    &::before{
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: -8px;
+      top: 0;
+      border-style: solid;
+      border-color: transparent #090909 transparent transparent;
+      border-width: 8px 10px 8px 0;
+    }
+    & i::after{
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 7px;
+      background: #dadada;
+      width: 1px;
+      height: 8px;
+      transform: rotate(45deg);
+    }
+    & i::before{
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 7px;
+      background: #dadada;
+      width: 1px;
+      height: 8px;
+      transform: rotate(-45deg);
+    }
+  }
+}

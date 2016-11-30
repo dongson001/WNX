@@ -1,0 +1,145 @@
+@bankCards: bankCards;
+.@{bankCards} {
+    @titHeight: 38px;
+    @m-lift: 50px;
+    @m-right: 20px;
+    @iconWidth: 42px;
+    .borderBottom(@color: #dadada) {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 200%;
+        border-bottom: 1px solid @color;
+        transform-origin: 0 0;
+        transform: scale3D(.5, .5, .5);
+    }
+    .ellipsis {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    & {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99;
+        width: 100%;
+        background-color: #fff;
+    }
+    &-box {
+        position: absolute;
+        top: 38px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: scroll;
+    }
+    &.actived {
+        animation: fadeInUp 0.3s 0.2s ease both;
+    }
+    &.removed {
+        animation: fadeOutDown 0.3s 0.3s ease both;
+    }
+    &.hidden {
+        display: none;
+    }
+    &-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        height: @titHeight;
+        line-height: @titHeight;
+
+        //border-bottom: @border;
+        &::before {
+            .borderBottom();
+        }
+    }
+
+    &-back {
+        position: absolute;
+        left: 0;
+        width: @titHeight;
+        height: @titHeight;
+        background: url(~images/arrow_left.png) no-repeat;
+        background-size: 6px 10px;
+        background-position: center;
+    }
+    &-item {
+        position: relative;
+        padding: 12px 10px;
+        overflow: hidden;
+        &::before {
+            .borderBottom();
+        }
+    }
+    &-fot {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    &-icon {
+        display: inline-block;
+        float: left;
+        width: @iconWidth;
+        height: @iconWidth;
+        border-radius: 50%;
+        background-color: #e9e9e9;
+        overflow: hidden;
+        position: relative;
+    }
+    &-icon img {
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &-addIcon {
+        background-image: url(~images/add_icon.png);
+        background-repeat: no-repeat;
+        background-size: 90% 90%;
+        background-position: center;
+        background-color: transparent;
+    }
+    &-summary {
+        margin-left: @m-lift;
+        margin-right: @m-right;
+        font-size: @font-size-small;
+        color: #4d4d4d;
+        height: @iconWidth / 2;
+        line-height: 1.6;
+        .ellipsis;
+    }
+    &-surplus {
+        margin-left: @m-lift;
+        margin-right: @m-right;
+        font-size: @font-size-smaller;
+        color: #717171;
+        height: @iconWidth / 2;
+        line-height: 1.8;
+        .ellipsis;
+    }
+    &-check {
+        display: block;
+        float: right;
+        width: 11px;
+        height: 6px;
+        border-left: 2px solid #ff8229;
+        border-bottom: 2px solid #ff8229;
+        transform: translateY(15px) rotateZ(-45deg);
+    }
+    &-addBtn {
+        margin-left: @m-lift;
+        font-size: @font-size-small;
+        color: #4d4d4d;
+        height: @iconWidth;
+        line-height: @iconWidth;
+    }
+}

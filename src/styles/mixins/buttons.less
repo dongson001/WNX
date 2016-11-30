@@ -1,0 +1,49 @@
+// Buttons
+.button-variant(@color; @background; @border) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+}
+// Button sizes
+.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius: 5px) {
+  padding: @padding-vertical @padding-horizontal;
+  font-size: @font-size;
+  line-height: @line-height;
+  border-radius: @border-radius;
+}
+// checkbox 单个按钮选中与被选中效果 lebel标签名需固定为checkbox-lebel
+/**
+1为背景颜色 2为背景图片
+*/
+.checkbox-lebel(@num; @display; @width; @height; @background-color; @border-radius; @color) when(@num < 2){
+  display: @display;
+  width: @width;
+  height: @height;//23
+  background-color: @background-color;//@btn-default-bg
+  border-radius: @border-radius;
+  color: @color;
+}
+.checkbox-lebel(@num; @display; @width; @height; @background-image;@bgwidth; @bgheight; @border-radius: 0;) when(@num = 2){
+  display: @display;
+  width: @width;
+  height: @height;
+  .img-retina(@background-image; @bgwidth; @bgheight);
+  border-radius: @border-radius;
+}
+//小于2则修改背景图
+.checkbox(@num; @background-image; @width; @height; @background-color ) when (@num < 2){
+  display: none;
+  &:checked + .checkbox-lebel{
+    .img-retina(@background-image; @width; @height);
+    background-position: center;
+    background-color: @background-color;
+  }
+}
+//不小于2则修改背景颜色
+.checkbox(@num; @background-color; @color) when (@num = 2){
+  display: none;
+  &:checked + .checkbox-lebel{
+    background-color: @background-color;
+    color: @color;
+  }
+}

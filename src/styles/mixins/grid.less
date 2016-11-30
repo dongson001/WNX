@@ -1,0 +1,79 @@
+//== Grid
+.make-row(@bg-color, @height, @justify-content) {
+  position: relative;
+  height: @height;
+  align-items: center;
+  justify-content: @justify-content;
+  background-color: @bg-color;
+}
+.make-col-both-left(@m-left, @font-size, @color) {
+  margin-left: @m-left;
+  font-size: @font-size;
+  color: @color;
+  text-align: left;
+}
+.make-col-both-right(@m-right, @font-size, @color) {
+  margin-right: @m-right;
+  font-size: @font-size;
+  color: @color;
+  text-align: right;
+}
+// content
+.contents(@bdcolor: @gray-obvious;){
+  position: relative;
+  flex: 1;
+  max-width: 86%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  &::after {
+    .horizontal(@bdcolor);
+    bottom: 0;
+  }
+  & .h2{
+    width: 80%;
+    padding-bottom: 4px;
+    text-align: left;
+    font-size: @font-size-md;
+    color: @grid-color-base;
+    .text-overflow();
+  }
+  & .p{
+    width: 80%;
+    padding-top: 4px;
+    text-align: left;
+    font-size: @font-size-smaller;
+    color: @gary;
+    .text-overflow();
+  }
+  & .checked{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: @grid-row-pd;
+    .size(18px, 100%);
+    .img-retina('~images/bindcard_back.jpg'; 18px; 13px);
+    background-position: center center;
+  }
+}
+.con-row(@width; @font-size; @color; @bg-image; @bg-size-x; @bg-size-y; @height: auto; @bg-color: #fff;){
+  line-height: @height;
+  font-size: @font-size;
+  color: @color;
+  text-align: center;
+  & .col-icon-status {
+    width: @width;
+    height: @height;
+    display: inline-block;
+    .img-retina(@bg-image; @bg-size-x; @bg-size-y);
+    background-position: center;
+    background-color: @bg-color;
+  }
+}
+.act-row(@font-size; @height:auto; @width:100%; @bg-color:#fff){
+  position: relative;
+  background: @bg-color;
+  width: @width;
+  height: @height;
+  font-size: @font-size;
+}

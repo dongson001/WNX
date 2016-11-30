@@ -1,0 +1,53 @@
+//** Block button
+.btn {
+  display: inline-block;
+  margin: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  .button-size(@padding-base-vertical, 0, @font-size-big, 1);
+}
+
+.btn-hollow {
+  .button-variant(@btn-default-color, transparent, @btn-default-color);
+}
+
+.btn-disable {
+  .button-variant(@gray-obvious, transparent, @gray-obvious);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-box {
+  padding: 0 15px;
+  margin: 20px 0;
+}
+.btn-box-both {
+  display: flex;
+  justify-content: space-between;
+  & .btn {
+    width: 48%;
+    display: block;
+  }
+}
+.btn-default{
+  background-color: @btn-default-color;
+  display: block;
+  width: 64%;
+  height: 1.2rem;
+  margin: 0 auto;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 1.2rem;
+  color: #fff;
+  font-size: 1rem;
+  margin: 1.2rem auto;
+}

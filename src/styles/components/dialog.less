@@ -1,0 +1,112 @@
+.mask {
+  .make-mask(rgba(0,0,0,.6));
+}
+.popup-box {
+  .make-popup-box();
+  animation:pulse .3s .2s ease both;
+  transform: translateX(-50%);
+  & .title {
+    text-align: center;
+    font-size: @font-size-md;
+    color: @grid-color-base;
+  }
+}
+
+.phone-verification {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0 25px 0;
+  position: relative;
+  font-size: @font-size-small;
+  .size(100%, 44px);
+  & .input {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border: 0;
+    margin-left: 15px;
+    color: @grid-color-base;
+    &::-webkit-input-placeholder {
+      color: #ccc;
+    }
+  }
+  & .line {
+    display: flex;
+    height: 40px;
+    border-right: 1px solid #ccc;
+    transform: scale3d(.5,.5,.5);
+  }
+  & .btn {
+    -webkit-appearance: none;
+    width: 115px;
+    background-color: rgba(0,0,0,0);
+    font-size: @font-size-small;
+    padding: 0;
+    color: @brand-jomp;
+    border: none;
+  }
+  & .btn-disable {
+    color: #ccc;
+  }
+
+  &::before {
+    .horizontal(@gray-obvious);
+    top: 0;
+  }
+  &::after {
+    .horizontal(@gray-obvious);
+    bottom: 0;
+  }
+}
+
+.popup-password {
+  margin: 25px 0 25px 0;
+}
+
+.popup-btns-box {
+  padding: 0 20px;
+  & .btn {
+    padding: 10px 0;
+  }
+}
+
+// fade-out
+.fade-out{
+    animation: fade-out .3s .2s ease both;
+}
+
+// Wechat ninimum height *****414px-479px
+@media screen and ( min-height:414px ) and ( max-height: 479px) {
+    .self-adaption {
+        top: 1%;
+    }
+}
+
+// iPhone4 ****480px-567px
+@media screen and ( min-height:480px ) and ( max-height: 567px) {
+    .self-adaption {
+        top: 9%;
+    }
+}
+
+// iPhone5 ****480px-567px
+@media screen and ( min-height:568px ) and ( max-height: 666px) {
+    .self-adaption {
+        top: 17%;
+    }
+}
+
+// iPhone6 ****568px-666px
+@media screen and ( min-height:665px ) and ( max-height: 735px) {
+    .self-adaption {
+        top: 21%;
+    }
+}
+
+// iPhone6plus ****735px
+@media screen and ( min-height: 735px) {
+    .self-adaption {
+        top: 24%;
+    }
+}

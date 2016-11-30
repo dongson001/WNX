@@ -1,0 +1,78 @@
+.col-input {
+  .input-size();
+}
+.col-row-input {
+  width: 260px;
+  margin-left: 15px;
+  color: #ccc;
+  &::-webkit-input-placeholder {
+    color: #ccc;
+  }
+}
+.col-input-right {
+  width: 85%;
+  text-align: right;
+}
+
+.perinfo-col-input {
+  .input-size(@font-size-bigger, @font-size-lesser);
+  display: block;
+}
+
+// select
+.col-select {
+  appearance:none;
+  .select-size(@font-size-lesser; @brand-jomp);
+}
+.msgError{
+  display: inline-block;
+  position: fixed;
+  width: 240px;
+  height: 50px;
+  line-height: 50px;
+  z-index: 5;
+  opacity: 1.6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  background-color: rgba(0,0,0,.6);
+  left: calc(50vw - 80px);
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.error-enter {
+  opacity: 0.01;
+}
+
+.error-enter.error-enter-active {
+  opacity: 1;
+  transition: opacity 700ms ease-in;
+}
+
+.error-leave {
+  opacity: 1;
+}
+
+.error-leave.error-leave-active {
+  opacity: 0.01;
+  transition: opacity 700ms ease-in;
+}
+.bank-limit {
+  padding: 10px;
+  & table{
+    text-align: center;
+    margin: 0 auto;
+  }
+  & thead td {
+    background-color: #EAE6E6;
+  }
+  & td {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 5px 10px;
+  }
+}
