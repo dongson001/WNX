@@ -15,6 +15,9 @@ import ProductResult from 'bundle?lazy!../views/Product/Result'
 import Surrender from 'bundle?lazy!../views/surrender/Surrender'
 import Result from 'bundle?lazy!../views/surrender/Result'
 
+//豆豆
+import Doudou from 'bundle?lazy!../views/doudou/Doudou'
+
 const loadContainerAsync = bundle => (location, cb) => {
     bundle(component => {
         cb(null, component)
@@ -34,5 +37,6 @@ export default (
         <Route      getComponent={loadContainerAsync(Guarantee)} path='/guarantee/(:productId/:productCode/):category' title="条款"/>
         <Route      getComponent={loadContainerAsync(DetailWelding)} path='/product/welding/(:isback)' title='处理中' backPath="/product/detail"/>
         <Route      getComponent={loadContainerAsync(ProductResult)} path='/product/result' title='投保结果' backPath="/product/detail"/>
+        <Route      getComponent={loadContainerAsync(Doudou)} path='/product/doudou' title='豆豆' backPath="/product/detail"/>        
     </Route>
 );
